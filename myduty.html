@@ -36,14 +36,22 @@ button:hover {
 </style>
 <script>
 function openDuty(){
-  const url = `data:text/html,<html><head><meta charset='UTF-8'><title>TSRTC Duty</title><script>
-  function submitForm(){document.forms[0].submit();}
-  window.onload=()=>{submitForm();};
-  </script></head><body style='margin:0;padding:0;'>
-  <form method='post' action='https://tgsrtcinfo.in/main/dm_award/cnd_duty1.php'>
-  <input type='hidden' name='staff_no' value='825955'>
-  </form></body></html>`;
-  window.open(url, '_blank');
+  // Replace the entire page with the auto-submit form
+  document.open();
+  document.write(`
+    <html><head><meta charset='UTF-8'><title>TSRTC Duty</title>
+    <script>
+      function submitForm(){document.forms[0].submit();}
+      window.onload=()=>{submitForm();};
+    <\/script>
+    </head>
+    <body style='margin:0;padding:0;'>
+      <form method='post' action='https://tgsrtcinfo.in/main/dm_award/cnd_duty1.php'>
+        <input type='hidden' name='staff_no' value='825955'>
+      </form>
+    </body></html>
+  `);
+  document.close();
 }
 </script>
 </head>
