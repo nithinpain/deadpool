@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TSRTC Duty (825955)</title>
+<style>
+body {
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#f8fafc;
+}
+iframe {
+  width:100%;
+  height:100%;
+  border:none;
+}
+</style>
+</head>
+<body>
+  <iframe name="dutyframe" src="about:blank"></iframe>
+
+  <form id="dutyform" method="post" target="dutyframe"
+        action="https://tgsrtcinfo.in/main/dm_award/cnd_duty4.php">
+    <input type="hidden" name="staff_no" value="826248">
+  </form>
+
+  <script>
+    document.getElementById("dutyform").submit();
+  </script>
+</body>
+</html>
